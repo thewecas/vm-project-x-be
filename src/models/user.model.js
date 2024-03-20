@@ -23,28 +23,6 @@ const User = sequelize.define("User", {
 			isEmail: true,
 		},
 	},
-	password: {
-		type: DataTypes.TEXT,
-		allowNull: false,
-		validate: {
-			min: 8,
-		},
-	},
 });
 
-const a = User.build({
-	name: "vikas",
-	username: "vikas.m",
-	email: "vikas@gamil.com",
-	password: "1234567845",
-});
-const b = User.build({
-	name: "vikas",
-	username: "vikas.m2",
-	email: "vikas@gamil.com",
-	password: "1234567845",
-});
-// console.log(a);
-
-console.log(User.findAll());
 module.exports = User;
